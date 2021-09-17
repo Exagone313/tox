@@ -708,6 +708,7 @@ def tox_testenv_create(venv, action):
         args.append("--always-copy")
     if not venv.envconfig.download:
         args.append("--no-download")
+        args.append("--no-seed")
     else:
         args.append("--download")
     # add interpreter explicitly, to prevent using default (virtualenv.ini)
